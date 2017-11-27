@@ -142,33 +142,33 @@ public class tablero extends Jugador {
     }
     public String wincheck()
     {
-            if(array[1][1].equals(Jugador1) && array[2][1].equals(Jugador1) && array[3][1].equals(super.Jugador1)) 
+            if(array[1][1].equals(Jugador1) && array[2][1].equals(Jugador1) && array[3][1].equals(Jugador1)) 
             {
                 this.imprimirtablero();
                 return this.win(Jugador1);
             }
-            if(array[1][2].equals(Jugador1) && array[2][2].equals(super.Jugador1) && array[3][2].equals(super.Jugador1)) 
+            if(array[1][2].equals(Jugador1) && array[2][2].equals(Jugador1) && array[3][2].equals(Jugador1)) 
             {
                 this.imprimirtablero();
-                return this.win(this.Jugador1);
+                return this.win(Jugador1);
             }
-            if(array[1][3].equals(super.Jugador1) && array[2][3].equals(super.Jugador1) && array[3][3].equals(super.Jugador1)) 
+            if(array[1][3].equals(Jugador1) && array[2][3].equals(Jugador1) && array[3][3].equals(Jugador1)) 
             {
                 this.imprimirtablero();
-                return this.win(this.Jugador1);
+                return this.win(Jugador1);
             }
-            if(array[1][1].equals(super.Jugador1) && array[2][2].equals(super.Jugador1) && array[3][3].equals(super.Jugador1)) 
+            if(array[1][1].equals(Jugador1) && array[2][2].equals(Jugador1) && array[3][3].equals(Jugador1)) 
             {
                 this.imprimirtablero();
-                return this.win(this.Jugador1);
+                return this.win(Jugador1);
             }
-            if(array[1][3].equals(super.Jugador1) && array[2][2].equals(super.Jugador1) && array[1][1].equals(super.Jugador1)) 
+            if(array[1][3].equals(Jugador1) && array[2][2].equals(Jugador1) && array[1][1].equals(Jugador1)) 
             {
                 this.imprimirtablero();
-                return this.win(this.Jugador1);
+                return this.win(Jugador1);
             }
             //jugador2
-            if(array[1][1].equals(super.Jugador2) && array[2][1].equals(super.Jugador2) && array[3][1].equals(super.Jugador2)) 
+            if(array[1][1].equals(Jugador2) && array[2][1].equals(super.Jugador2) && array[3][1].equals(super.Jugador2)) 
             {
                 this.imprimirtablero();
                 return this.win(this.Jugador2);
