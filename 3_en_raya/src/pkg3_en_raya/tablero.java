@@ -176,22 +176,22 @@ public class tablero extends Jugador {
             if(array[1][2].equals(Jugador2) && array[2][2].equals(Jugador2) && array[3][2].equals(Jugador2)) 
             {
                 this.imprimirtablero();
-                return this.win(this.Jugador2);
+                return this.win(Jugador2);
             }
-            if(array[1][3].equals(super.Jugador2) && array[2][3].equals(super.Jugador2) && array[3][3].equals(super.Jugador2)) 
+            if(array[1][3].equals(Jugador2) && array[2][3].equals(Jugador2) && array[3][3].equals(Jugador2)) 
             {
                 this.imprimirtablero();
-                return this.win(this.Jugador2);
+                return this.win(Jugador2);
             }
-            if(array[1][1].equals(super.Jugador2) && array[2][2].equals(super.Jugador2) && array[3][3].equals(super.Jugador2)) 
+            if(array[1][1].equals(Jugador2) && array[2][2].equals(Jugador2) && array[3][3].equals(Jugador2)) 
             {
                 this.imprimirtablero();
-                return this.win(this.Jugador2);
+                return this.win(Jugador2);
             }
-            if(array[1][3].equals(super.Jugador2) && array[2][2].equals(super.Jugador2) && array[1][1].equals(super.Jugador2)) 
+            if(array[1][3].equals(Jugador2) && array[2][2].equals(Jugador2) && array[1][1].equals(Jugador2)) 
             {
                 this.imprimirtablero();
-                return this.win(this.Jugador2);
+                return this.win(Jugador2);
             }
             else 
             {
