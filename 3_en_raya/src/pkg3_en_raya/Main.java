@@ -5,7 +5,9 @@
  */
 package pkg3_en_raya;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
 /**
  *
@@ -17,11 +19,14 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int i = 1;
         String jugador1 = "X";
         String jugador2 = "O";
-        String nombrejugador1 = "xavi";
-        String nombrejugador2 = "ruben";
+        System.out.println("Escribe nombre Jugador1");
+        String nombrejugador1 = br.readLine();
+        System.out.println("Escribe Nombre Jugador 2");
+        String nombrejugador2 = br.readLine();
         tablero t = new tablero(jugador1,jugador2,nombrejugador1,nombrejugador2);
         System.out.println();
         t.imprimirtablero();
@@ -30,7 +35,7 @@ public class Main {
         t.moverjugador1();
         System.out.println(t.wincheck());
         t.moverjugador2();
-        t.wincheck();
+        System.out.println(t.wincheck());
         }
     }
     

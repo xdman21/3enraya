@@ -142,12 +142,12 @@ public class tablero extends Jugador {
     }
     public String wincheck()
     {
-            if(array[1][1].equals(super.Jugador1) && array[2][1].equals(super.Jugador1) && array[3][1].equals(super.Jugador1)) 
+            if(array[1][1].equals(Jugador1) && array[2][1].equals(Jugador1) && array[3][1].equals(super.Jugador1)) 
             {
                 this.imprimirtablero();
-                return this.win(this.Jugador1);
+                return this.win(Jugador1);
             }
-            if(array[1][2].equals(super.Jugador1) && array[2][2].equals(super.Jugador1) && array[3][2].equals(super.Jugador1)) 
+            if(array[1][2].equals(Jugador1) && array[2][2].equals(super.Jugador1) && array[3][2].equals(super.Jugador1)) 
             {
                 this.imprimirtablero();
                 return this.win(this.Jugador1);
