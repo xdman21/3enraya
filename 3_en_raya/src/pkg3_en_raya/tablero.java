@@ -14,6 +14,10 @@ import java.io.InputStreamReader;
  * @author xavi
  */
 public class tablero {
+    private String Jugador1;
+    private String Jugador1name;
+    private String Jugador2;
+    private String Jugador2name;
     public static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     protected static String[][] array = new String[6][9];
     protected static boolean[][] arraybool = new boolean[6][9];
@@ -201,17 +205,15 @@ public class tablero {
                 return "";
             }
     }
-
-    @Override
     public String win(String player) 
     {
-        if(player.equals(super.Jugador1)) 
+        if(player.equals(Jugador1)) 
         {
-        return "El Ganador es el Jugador "+super.Jugador1name;
+        return "El Ganador es el Jugador "+ Jugador1name;
         }
-        if(player.equals(super.Jugador2)) 
+        if(player.equals(Jugador2)) 
         {
-        return "El Ganador es el Jugador "+super.Jugador2name;
+        return "El Ganador es el Jugador "+ Jugador2name;
         }
         else 
         {
