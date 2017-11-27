@@ -13,13 +13,16 @@ import java.io.InputStreamReader;
  *
  * @author xavi
  */
-public class tablero extends Jugador {
+public class tablero {
     public static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     protected static String[][] array = new String[6][9];
     protected static boolean[][] arraybool = new boolean[6][9];
     public tablero(String Jugador1, String Jugador2, String Jugador1name, String Jugador2name) 
     {
-        super(Jugador1, Jugador2, Jugador1name, Jugador2name);
+        this.Jugador1 = Jugador1; 
+        this.Jugador2 = Jugador2;
+        this.Jugador1name = Jugador1name;
+        this.Jugador2name = Jugador2name;
     }
     public void imprimirtablero() 
     {
