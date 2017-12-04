@@ -20,6 +20,8 @@ public class tablero
     private String Jugador2;
     private String Jugador2name;
     
+    public String [][] tablero = new tablero[3][3];
+    
     public static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     protected static String[][] array = new String[6][9];
     protected static boolean[][] arraybool = new boolean[6][9];
@@ -32,9 +34,8 @@ public class tablero
         this.Jugador2name = Jugador2name;
     }
     
-    public void imprimirtablero() 
+    public void crearTablero()
     {
-        String [][] tablero = new String [3][3];
         int p = 1;
         
         for (int i = 0; i < tablero.length; i++) 
@@ -45,7 +46,10 @@ public class tablero
                 p++;
             }
         }
-        
+    }
+    
+    public void imprimirtablero() 
+    {
         System.out.println("---------");
         for (int fila = 0; fila < tablero.length; fila++) 
         {
