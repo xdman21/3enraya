@@ -21,7 +21,7 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int i = 1;
         String jugador1 = "X";
-        String jugador2 = "O";
+        String jugador2 = "J";
         System.out.println("Escribe nombre Jugador1");
         String nombrejugador1 = br.readLine();
         System.out.println("Escribe Nombre Jugador 2");
