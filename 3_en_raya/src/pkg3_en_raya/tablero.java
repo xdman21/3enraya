@@ -13,15 +13,18 @@ import java.io.InputStreamReader;
  *
  * @author xavi
  */
-public class tablero {
+public class tablero 
+{
     private String Jugador1;
     private String Jugador1name;
     private String Jugador2;
     private String Jugador2name;
+    
     public static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     protected static String[][] array = new String[6][9];
     protected static boolean[][] arraybool = new boolean[6][9];
     public tablero(String Jugador1, String Jugador2, String Jugador1name, String Jugador2name) 
+        
     {
         this.Jugador1 = Jugador1; 
         this.Jugador2 = Jugador2;
@@ -105,6 +108,7 @@ public class tablero {
             }
         }
     }
+    
     public void moverjugador2() throws IOException 
     {
         System.out.println("Jugador2(O)");
@@ -151,6 +155,7 @@ public class tablero {
             }
         }
     }
+    
     public String wincheck()
     {
             if(array[1][1].equals(Jugador1) && array[2][1].equals(Jugador1) && array[3][1].equals(Jugador1)) 
@@ -209,6 +214,7 @@ public class tablero {
                 return "";
             }
     }
+    
     public String win(String player) 
     {
         if(player.equals(Jugador1)) 
