@@ -67,96 +67,95 @@ public class tablero
     
     public void moverjugador1() throws IOException 
     {
-        System.out.println("Jugador1 (X)");
-        System.out.println("Escribe las coordenadas");
-        System.out.println("Izquierda a derecha");
-        String cadena = br.readLine();
-        int coordenadas1 = Integer.parseInt(cadena);
-        System.out.println("Arriba abajo");
-        cadena = br.readLine();
-        int coordenadas2 = Integer.parseInt(cadena);
-        for (int i = 0; i < 5; i++) 
+        System.out.println("Jugador1 [X]");
+        
+        System.out.println("Seleccione una posicion");
+        
+        switch(Integer.parseInt(br.readLine()))
         {
-            if(i == 0 || i == 4) 
-            {
-                System.out.println("-----");
-            }
-            else 
-            {
-                for (int j = 0; j < 5; j++) 
-                {
-                    if(j == 4 || j == 0) 
-                    {
-                        System.out.print("|");
-                    }
-                    else 
-                    {
-                        if(i == coordenadas2 && j == coordenadas1 && i < 4 && i > 0 && j < 4 && j > 0 && arraybool[i][j] == true)  
-                        {
-                        arraybool[i][j] = false;
-                        array[i][j] = this.Jugador1;
-                        System.out.print(array[i][j]);
-                        }
-                        else 
-                        {
-                            System.out.print(array[i][j]);
-                            if(i > 4 && i < 0 && j > 4 && j < 0)
-                            {
-                                System.out.println("Posición Incorrecta");
-                            }
-                        }
-                    }
-                }
-                
-            System.out.println("");
-            }
+            case 1:
+                tablero[0][0] = "[X]";
+                imprimirtablero();
+                break;
+            case 2:
+                tablero[0][1] = "[X]";
+                imprimirtablero();
+                break;
+            case 3:
+                tablero[0][2] = "[X]";
+                imprimirtablero();
+                break;
+            case 4:
+                tablero[1][0] = "[X]";
+                imprimirtablero();
+                break;
+            case 5:
+                tablero[1][1] = "[X]";
+                imprimirtablero();
+                break;
+            case 6:
+                tablero[1][2] = "[X]";
+                imprimirtablero();
+                break;
+            case 7:
+                tablero[2][0] = "[X]";
+                imprimirtablero();
+                break;
+            case 8:
+                tablero[2][2] = "[X]";
+                imprimirtablero();
+                break;
+            case 9:
+                tablero[2][3] = "[X]";
+                imprimirtablero();
+                break;
         }
     }
     
     public void moverjugador2() throws IOException 
     {
-        System.out.println("Jugador2(O)");
-        System.out.println("Escribe las coordenadas");
-        System.out.println("Izquierda a derecha");
-        String cadena = br.readLine();
-        int coordenadas1 = Integer.parseInt(cadena);
-        System.out.println("Arriba abajo");
-        cadena = br.readLine();
-        int coordenadas2 = Integer.parseInt(cadena);
-        for (int i = 0; i < 5; i++) 
+        System.out.println("Jugador1 [X]");
+        
+        System.out.println("Seleccione una posicion");
+        
+        switch(Integer.parseInt(br.readLine()))
         {
-            if(i == 0 || i == 4) 
-            {
-                System.out.println("-----");
-            }
-            else 
-            {
-            for (int j = 0; j < 5; j++) 
-            {
-                if(j == 4 || j == 0) 
-                {
-                    System.out.print("|");
-                }
-                else 
-                {
-                if(i == coordenadas2 && j == coordenadas1 && i < 4 && i > 0 && j < 4 && j > 0 && arraybool[i][j] == true)  
-                {
-                arraybool[i][j] = false;
-                array[i][j] = this.Jugador2;
-                System.out.print(array[i][j]);
-                }
-                else 
-                {
-                System.out.print(array[i][j]);
-                if(i > 4 && i < 0 && j > 4 && j < 0)
-                {
-                    System.out.println("Posición Incorrecta");
-                }
-                }
-                }
-            }
-            System.out.println("");
-            }
+            case 1:
+                tablero[0][0] = "[O]";
+                imprimirtablero();
+                break;
+            case 2:
+                tablero[0][1] = "[O]";
+                imprimirtablero();
+                break;
+            case 3:
+                tablero[0][2] = "[O]";
+                imprimirtablero();
+                break;
+            case 4:
+                tablero[1][0] = "[O]";
+                imprimirtablero();
+                break;
+            case 5:
+                tablero[1][1] = "[O]";
+                imprimirtablero();
+                break;
+            case 6:
+                tablero[1][2] = "[O]";
+                imprimirtablero();
+                break;
+            case 7:
+                tablero[2][0] = "[O]";
+                imprimirtablero();
+                break;
+            case 8:
+                tablero[2][2] = "[O]";
+                imprimirtablero();
+                break;
+            case 9:
+                tablero[2][3] = "[O]";
+                imprimirtablero();
+                break;
         }
     }
     
