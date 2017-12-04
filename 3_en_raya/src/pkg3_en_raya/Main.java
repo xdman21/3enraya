@@ -28,13 +28,13 @@ public class Main {
         String nombrejugador2 = br.readLine();
         tablero t = new tablero(jugador1,jugador2,nombrejugador1,nombrejugador2);
         System.out.println();
+        t.crearTablero();
         t.imprimirtablero();
+        
         while(i != 9) 
         {
-        t.moverjugador1();
-        System.out.println(t.wincheck());
-        t.moverjugador2();
-        System.out.println(t.wincheck());
+            t.moverjugador1();
+            t.moverjugador2();
         }
     }
     
