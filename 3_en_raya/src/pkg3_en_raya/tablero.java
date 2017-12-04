@@ -28,6 +28,7 @@ public class tablero {
         this.Jugador1name = Jugador1name;
         this.Jugador2name = Jugador2name;
     }
+    
     public void imprimirtablero() 
     {
         for (int i = 0; i < 5; i++) 
@@ -38,23 +39,25 @@ public class tablero {
             }
             else 
             {
-            for (int j = 0; j < 5; j++) 
-            {
-                if(j == 4 || j == 0) 
+                for (int j = 0; j < 5; j++) 
                 {
-                    System.out.print("|");
+                    if(j == 4 || j == 0) 
+                    {
+                        System.out.print("|");
+                    }
+                    else 
+                    {
+                    arraybool[i][j] = true;
+                    array[i][j] = " ";
+                    System.out.print(array[i][j]);
+                    }
                 }
-                else 
-                {
-                arraybool[i][j] = true;
-                array[i][j] = " ";
-                System.out.print(array[i][j]);
-                }
-            }
+                
             System.out.println("");
             }
         }
     }
+    
     public void moverjugador1() throws IOException 
     {
         System.out.println("Jugador1 (X)");
@@ -73,30 +76,31 @@ public class tablero {
             }
             else 
             {
-            for (int j = 0; j < 5; j++) 
-            {
-                if(j == 4 || j == 0) 
+                for (int j = 0; j < 5; j++) 
                 {
-                    System.out.print("|");
+                    if(j == 4 || j == 0) 
+                    {
+                        System.out.print("|");
+                    }
+                    else 
+                    {
+                        if(i == coordenadas2 && j == coordenadas1 && i < 4 && i > 0 && j < 4 && j > 0 && arraybool[i][j] == true)  
+                        {
+                        arraybool[i][j] = false;
+                        array[i][j] = this.Jugador1;
+                        System.out.print(array[i][j]);
+                        }
+                        else 
+                        {
+                            System.out.print(array[i][j]);
+                            if(i > 4 && i < 0 && j > 4 && j < 0)
+                            {
+                                System.out.println("Posición Incorrecta");
+                            }
+                        }
+                    }
                 }
-                else 
-                {
-                if(i == coordenadas2 && j == coordenadas1 && i < 4 && i > 0 && j < 4 && j > 0 && arraybool[i][j] == true)  
-                {
-                arraybool[i][j] = false;
-                array[i][j] = this.Jugador1;
-                System.out.print(array[i][j]);
-                }
-                else 
-                {
-                System.out.print(array[i][j]);
-                if(i > 4 && i < 0 && j > 4 && j < 0)
-                {
-                    System.out.println("Posición Incorrecta");
-                }
-                }
-                }
-            }
+                
             System.out.println("");
             }
         }
