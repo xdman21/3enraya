@@ -13,19 +13,19 @@ import java.io.InputStreamReader;
  *
  * @author xavi
  */
+
 public class tablero 
 {
-    private String Jugador1;
     private String Jugador1name;
-    private String Jugador2;
     private String Jugador2name;
     
     public String [][] tablero = new tablero[3][3];
     
     public static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-    protected static String[][] array = new String[6][9];
-    protected static boolean[][] arraybool = new boolean[6][9];
-    public tablero(String Jugador1, String Jugador2, String Jugador1name, String Jugador2name) 
+    
+    public tablero()
+    {
+    }
         
     {
         this.Jugador1 = Jugador1; 
@@ -67,7 +67,7 @@ public class tablero
     
     public void moverjugador1() throws IOException 
     {
-        System.out.println("Jugador1 [X]");
+        System.out.println("Jugador 1 [X]");
         
         System.out.println("Seleccione una posicion");
         
@@ -114,7 +114,7 @@ public class tablero
     
     public void moverjugador2() throws IOException 
     {
-        System.out.println("Jugador1 [X]");
+        System.out.println("Jugador 2 [X]");
         
         System.out.println("Seleccione una posicion");
         
@@ -161,74 +161,74 @@ public class tablero
     
     public String wincheck()
     {
-            if(array[1][1].equals(Jugador1) && array[2][1].equals(Jugador1) && array[3][1].equals(Jugador1)) 
-            {
-                this.imprimirtablero();
-                return this.win(Jugador1);
-            }
-            if(array[1][2].equals(Jugador1) && array[2][2].equals(Jugador1) && array[3][2].equals(Jugador1)) 
-            {
-                this.imprimirtablero();
-                return this.win(Jugador1);
-            }
-            if(array[1][3].equals(Jugador1) && array[2][3].equals(Jugador1) && array[3][3].equals(Jugador1)) 
-            {
-                this.imprimirtablero();
-                return this.win(Jugador1);
-            }
-            if(array[1][1].equals(Jugador1) && array[2][2].equals(Jugador1) && array[3][3].equals(Jugador1)) 
-            {
-                this.imprimirtablero();
-                return this.win(Jugador1);
-            }
-            if(array[1][3].equals(Jugador1) && array[2][2].equals(Jugador1) && array[1][1].equals(Jugador1)) 
-            {
-                this.imprimirtablero();
-                return this.win(Jugador1);
-            }
-            //jugador2
-            if(array[1][1].equals(Jugador2) && array[2][1].equals(Jugador2) && array[3][1].equals(Jugador2)) 
-            {
-                this.imprimirtablero();
-                return this.win(Jugador2);
-            }
-            if(array[1][2].equals(Jugador2) && array[2][2].equals(Jugador2) && array[3][2].equals(Jugador2)) 
-            {
-                this.imprimirtablero();
-                return this.win(Jugador2);
-            }
-            if(array[1][3].equals(Jugador2) && array[2][3].equals(Jugador2) && array[3][3].equals(Jugador2)) 
-            {
-                this.imprimirtablero();
-                return this.win(Jugador2);
-            }
-            if(array[1][1].equals(Jugador2) && array[2][2].equals(Jugador2) && array[3][3].equals(Jugador2)) 
-            {
-                this.imprimirtablero();
-                return this.win(Jugador2);
-            }
-            if(array[1][3].equals(Jugador2) && array[2][2].equals(Jugador2) && array[1][1].equals(Jugador2)) 
-            {
-                this.imprimirtablero();
-                return this.win(Jugador2);
-            }
-            else 
-            {
-                return "";
-            }
-    }
-    
-    public String win(String player) 
-    {
-        if(player.equals(Jugador1)) 
+        //Jugador 1
+        if (tablero[0][0].contains("X") && tablero[0][1].contains("X") && tablero[0][2].contains("X")) 
         {
-        return "El Ganador es el Jugador "+ Jugador1name;
+            return "GANO EL JUGADOR 1";
         }
-        if(player.equals(Jugador2)) 
+        else if (tablero[1][0].contains("X") && tablero[1][1].contains("X") && tablero[1][2].contains("X"))
         {
-        return "El Ganador es el Jugador "+ Jugador2name;
+            return "GANO EL JUGADOR 1";
         }
-        else 
+        else if (tablero[2][0].contains("X") && tablero[2][1].contains("X") && tablero[2][2].contains("X"))
+        {
+            return "GANO EL JUGADOR 1";
+        }
+        else if (tablero[0][0].contains("X") && tablero[1][0].contains("X") && tablero[2][0].contains("X"))
+        {
+            return "GANO EL JUGADOR 1";
+        }
+        else if (tablero[0][1].contains("X") && tablero[1][1].contains("X") && tablero[2][1].contains("X"))
+        {
+            return "GANO EL JUGADOR 1";
+        }
+        else if (tablero[0][2].contains("X") && tablero[1][2].contains("X") && tablero[2][2].contains("X"))
+        {
+            return "GANO EL JUGADOR 1";
+        }
+        else if (tablero[0][0].contains("X") && tablero[1][1].contains("X") && tablero[2][2].contains("X"))
+        {
+            return "GANO EL JUGADOR 1";
+        }
+        else if (tablero[0][2].contains("X") && tablero[1][1].contains("X") && tablero[2][0].contains("X"))
+        {
+            return "GANO EL JUGADOR 1";
+        }
+        
+        //Jugador 2
+        if (tablero[0][0].contains("O") && tablero[0][1].contains("O") && tablero[0][2].contains("O")) 
+        {
+            return "GANO EL JUGADOR 2";
+        }
+        else if (tablero[1][0].contains("O") && tablero[1][1].contains("O") && tablero[1][2].contains("O"))
+        {
+            return "GANO EL JUGADOR 2";
+        }
+        else if (tablero[2][0].contains("O") && tablero[2][1].contains("O") && tablero[2][2].contains("O"))
+        {
+            return "GANO EL JUGADOR 2";
+        }
+        else if (tablero[0][0].contains("O") && tablero[1][0].contains("O") && tablero[2][0].contains("O"))
+        {
+            return "GANO EL JUGADOR 2";
+        }
+        else if (tablero[0][1].contains("O") && tablero[1][1].contains("O") && tablero[2][1].contains("O"))
+        {
+            return "GANO EL JUGADOR 2";
+        }
+        else if (tablero[0][2].contains("O") && tablero[1][2].contains("O") && tablero[2][2].contains("O"))
+        {
+            return "GANO EL JUGADOR 2";
+        }
+        else if (tablero[0][0].contains("O") && tablero[1][1].contains("O") && tablero[2][2].contains("O"))
+        {
+            return "GANO EL JUGADOR 2";
+        }
+        else if (tablero[0][2].contains("O") && tablero[1][1].contains("O") && tablero[2][0].contains("O"))
+        {
+            return "GANO EL JUGADOR 2";
+        }
+        else
         {
             return "";
         }
