@@ -31,10 +31,30 @@ public class tablero {
     
     public void imprimirtablero() 
     {
+        String [][] tablero = new String [3][3];
+        int p = 1;
+        
+        for (int i = 0; i < tablero.length; i++) 
+        {
+            for (int j = 0; j < tablero[i].length; j++) 
+            {
+                tablero[i][j] = "["+p+"]";
+                p++;
+            }
+        }
+        
         System.out.println("---------");
-        System.out.println("[1][2][3]");
-        System.out.println("[4][5][6]");
-        System.out.println("[7][8][9]");
+        for (int fila = 0; fila < tablero.length; fila++) 
+        {
+            String mostrar = "";
+            
+            for (int columna = 0; columna < tablero[fila].length; columna++) 
+            {
+                mostrar = mostrar + tablero[fila][columna];
+            }
+            
+            System.out.println(mostrar);
+        }
         System.out.println("---------");
     }
     
