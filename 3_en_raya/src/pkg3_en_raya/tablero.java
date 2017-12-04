@@ -31,31 +31,11 @@ public class tablero {
     
     public void imprimirtablero() 
     {
-        for (int i = 0; i < 5; i++) 
-        {
-            if(i == 0 || i == 4) 
-            {
-                System.out.println("-----");
-            }
-            else 
-            {
-                for (int j = 0; j < 5; j++) 
-                {
-                    if(j == 4 || j == 0) 
-                    {
-                        System.out.print("|");
-                    }
-                    else 
-                    {
-                    arraybool[i][j] = true;
-                    array[i][j] = " ";
-                    System.out.print(array[i][j]);
-                    }
-                }
-                
-            System.out.println("");
-            }
-        }
+        System.out.println("---------");
+        System.out.println("[1][2][3]");
+        System.out.println("[4][5][6]");
+        System.out.println("[7][8][9]");
+        System.out.println("---------");
     }
     
     public void moverjugador1() throws IOException 
