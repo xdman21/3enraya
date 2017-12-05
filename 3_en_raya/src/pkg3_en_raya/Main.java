@@ -26,7 +26,7 @@ public class Main
         System.out.println("Escribe Nombre Jugador 2");
         String nombrejugador2 = br.readLine();
         
-        tablero t = new tablero();
+        tablero t = new tablero(nombrejugador1, nombrejugador2);
 
         t.crearTablero();
         t.imprimirtablero();
