@@ -26,13 +26,6 @@ public class tablero
     public tablero()
     {
     }
-        
-    {
-        this.Jugador1 = Jugador1; 
-        this.Jugador2 = Jugador2;
-        this.Jugador1name = Jugador1name;
-        this.Jugador2name = Jugador2name;
-    }
     
     public void crearTablero()
     {
@@ -102,11 +95,11 @@ public class tablero
                 imprimirtablero();
                 break;
             case 8:
-                tablero[2][2] = "[X]";
+                tablero[2][1] = "[X]";
                 imprimirtablero();
                 break;
             case 9:
-                tablero[2][3] = "[X]";
+                tablero[2][2] = "[X]";
                 imprimirtablero();
                 break;
         }
@@ -114,7 +107,7 @@ public class tablero
     
     public void moverjugador2() throws IOException 
     {
-        System.out.println("Jugador 2 [X]");
+        System.out.println("Jugador 2 [O]");
         
         System.out.println("Seleccione una posicion");
         
@@ -149,11 +142,11 @@ public class tablero
                 imprimirtablero();
                 break;
             case 8:
-                tablero[2][2] = "[O]";
+                tablero[2][1] = "[O]";
                 imprimirtablero();
                 break;
             case 9:
-                tablero[2][3] = "[O]";
+                tablero[2][2] = "[O]";
                 imprimirtablero();
                 break;
         }
