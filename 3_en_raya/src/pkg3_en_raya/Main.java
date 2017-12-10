@@ -26,15 +26,27 @@ public class Main
         System.out.println("Escribe Nombre Jugador 2");
         String nombrejugador2 = br.readLine();
         
-        tablero t = new tablero(nombrejugador1, nombrejugador2);
+        tablero t = new tablero();
 
         t.crearTablero();
         t.imprimirtablero();
         
-        while(i <= 4) 
+        while(i != 10) 
         {
             t.moverjugador1();
+            System.out.println(t.wincheck());
+            if(t.wincheck().equals("GANO EL JUGADOR 1")) 
+            {
+                System.out.println("Tablero Reseteado");
+                t.crearTablero();
+            }
             t.moverjugador2();
+            System.out.println(t.wincheck());
+            if(t.wincheck().equals("GANO EL JUGADOR 2")) 
+            {
+                System.out.println("Tablero Reseteado");
+                t.crearTablero();
+            }
             
             i++;
         }
