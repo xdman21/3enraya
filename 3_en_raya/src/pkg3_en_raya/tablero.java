@@ -23,12 +23,6 @@ public class tablero
     
     public static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     
-    public tablero(String nombrejugador1, String nombrejugador2)
-    {
-    	this.Jugador1name = nombrejugador1;
-    	this.Jugador2name = nombrejugador2;
-    }
-    
     public void crearTablero()
     {
         int p = 1;
@@ -109,7 +103,7 @@ public class tablero
     
     public void moverjugador2() throws IOException 
     {
-        System.out.println("Jugador 2 [O]");
+        System.out.println("Jugador 2 [X]");
         
         System.out.println("Seleccione una posicion");
         
@@ -157,71 +151,93 @@ public class tablero
     public String wincheck()
     {
         //Jugador 1
-        if (tablero[0][0].contains("X") && tablero[0][1].contains("X") && tablero[0][2].contains("X")) 
+        int times = 0;
+        int times2 = 0;
+        for (int i = 0; i <= 2; i++) 
         {
-            return "GANO " + this.Jugador1name.toUpperCase();
+                for (int j = 0; j <= 2; j++) 
+                {
+                    if(tablero[i][j].contains("X")) 
+                    {
+                        times++;
+                        if(times == 3) 
+                        {
+                            return "GANO EL JUGADOR 1";
+                        }
+                    }
+                }
+                times = 0;
         }
-        else if (tablero[1][0].contains("X") && tablero[1][1].contains("X") && tablero[1][2].contains("X"))
+        int j2 = 0;
+        times = 0;
+        for (int i = 0; i <= 2; i++) 
         {
-            return "GANO " + this.Jugador1name.toUpperCase();
+            if(tablero[i][j2].contains("X")) 
+            {
+                times++;
+                if(times == 3) 
+                {
+                    return "GANO EL JUGADOR 1";
+                }
+            }
+            if(i == 2 && j2 != 2) 
+            {
+                i = -1;
+                j2++;
+                times = 0;
+            }
         }
-        else if (tablero[2][0].contains("X") && tablero[2][1].contains("X") && tablero[2][2].contains("X"))
+        if (tablero[0][0].contains("X") && tablero[1][1].contains("X") && tablero[2][2].contains("X"))
         {
-            return "GANO " + this.Jugador1name.toUpperCase();
-        }
-        else if (tablero[0][0].contains("X") && tablero[1][0].contains("X") && tablero[2][0].contains("X"))
-        {
-            return "GANO " + this.Jugador1name.toUpperCase();
-        }
-        else if (tablero[0][1].contains("X") && tablero[1][1].contains("X") && tablero[2][1].contains("X"))
-        {
-            return "GANO " + this.Jugador1name.toUpperCase();
-        }
-        else if (tablero[0][2].contains("X") && tablero[1][2].contains("X") && tablero[2][2].contains("X"))
-        {
-            return "GANO " + this.Jugador1name.toUpperCase();
-        }
-        else if (tablero[0][0].contains("X") && tablero[1][1].contains("X") && tablero[2][2].contains("X"))
-        {
-            return "GANO " + this.Jugador1name.toUpperCase();
+            return "GANO EL JUGADOR 1";
         }
         else if (tablero[0][2].contains("X") && tablero[1][1].contains("X") && tablero[2][0].contains("X"))
         {
-            return "GANO " + this.Jugador1name.toUpperCase();
+            return "GANO EL JUGADOR 1";
         }
         
         //Jugador 2
-        if (tablero[0][0].contains("O") && tablero[0][1].contains("O") && tablero[0][2].contains("O")) 
+        for (int i = 0; i <= 2; i++) 
         {
-            return "GANO " + this.Jugador2name.toUpperCase();
+                for (int j = 0; j <= 2; j++) 
+                {
+                    if(tablero[i][j].contains("O")) 
+                    {
+                        times2++;
+                        if(times2 == 3) 
+                        {
+                            return "GANO EL JUGADOR 2";
+                        }
+                    }
+                }
+                times2 = 0;
         }
-        else if (tablero[1][0].contains("O") && tablero[1][1].contains("O") && tablero[1][2].contains("O"))
+        j2 = 0;
+        times2 = 0;
+        for (int i = 0; i <= 2; i++) 
         {
-            return "GANO " + this.Jugador2name.toUpperCase();
+            if(tablero[i][j2].contains("O")) 
+            {
+                times2++;
+                if(times2 == 3) 
+                {
+                    return "GANO EL JUGADOR 2";
+                }
+            }
+            if(i == 2 && j2 != 2) 
+            {
+                i = -1;
+                j2++;
+                times2 = 0;
+            }
         }
-        else if (tablero[2][0].contains("O") && tablero[2][1].contains("O") && tablero[2][2].contains("O"))
+        if (tablero[0][0].contains("O") && tablero[1][1].contains("O") && tablero[2][2].contains("O"))
         {
-            return "GANO " + this.Jugador2name.toUpperCase();
-        }
-        else if (tablero[0][0].contains("O") && tablero[1][0].contains("O") && tablero[2][0].contains("O"))
-        {
-            return "GANO " + this.Jugador2name.toUpperCase();
-        }
-        else if (tablero[0][1].contains("O") && tablero[1][1].contains("O") && tablero[2][1].contains("O"))
-        {
-            return "GANO " + this.Jugador2name.toUpperCase();
-        }
-        else if (tablero[0][2].contains("O") && tablero[1][2].contains("O") && tablero[2][2].contains("O"))
-        {
-            return "GANO " + this.Jugador2name.toUpperCase();
-        }
-        else if (tablero[0][0].contains("O") && tablero[1][1].contains("O") && tablero[2][2].contains("O"))
-        {
-            return "GANO " + this.Jugador2name.toUpperCase();
+            return "GANO EL JUGADOR 2";
         }
         else if (tablero[0][2].contains("O") && tablero[1][1].contains("O") && tablero[2][0].contains("O"))
         {
-            return "GANO " + this.Jugador2name.toUpperCase();
+            return "GANO EL JUGADOR 2";
         }
         else
         {
